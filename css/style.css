@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --background-color: #000;
+  --text-color: #fff;
+  --navbar-bg-color: rgba(0, 0, 0, 0.8);
+  --navbar-hover-color: rgb(255, 255, 255);
+  --btn-bg-1: hsla(0, 100%, 60%, 1); /* Rojo de Netflix */
+  --btn-bg-2: hsla(0, 100%, 40%, 1); /* Rojo más oscuro */
+  --btn-bg-color: hsla(0, 100%, 100%, 1); /* Blanco */
+  --box-shadow-1: 0px 0px 20px hsla(0, 100%, 40%, 0.5);
+  --box-shadow-2: 0px 5px 5px -1px hsla(0, 100%, 20%, 0.25);
+  --box-shadow-3: inset 4px 4px 8px hsla(0, 100%, 50%, 0.5);
+  --box-shadow-4: inset -4px -4px 8px hsla(0, 100%, 10%, 0.35);
+  --font-family: 'Bebas Neue', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  transition: background-color 0.3s ease;
+  height: min-content;
+}
+
+.primera {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+    url('../img/codigos-secretos-netflix-1200x675.png') no-repeat center center;
+  background-size: cover;
+  color: var(--text-color);
+  text-align: center;
+  padding: 100px 0;
+  height: 90vh;
+  font-family: var(--font-family);
+}
+
+.primera-in {
+  margin-top: 15vh;
+}
+
+.especifics {
+  margin-top: -15vh;
+}
+
+.featurette {
+  padding: 100px 0;
+}
+
+.footer {
+  background-color: #333;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.navbar-brand {
+  color: red;
+  font-family: var(--font-family);
+  font-size: 4rem;
+}
+
+.navbar-brand:hover {
+  color: var(--navbar-hover-color);
+  font-family: var(--font-family);
+  font-size: 4rem;
+}
+
+.btn-donate {
+  --size: 1rem;
+  --radii: 0.5em;
+  cursor: pointer;
+  margin-left: 15px;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: var(--box-shadow-1), var(--box-shadow-2), var(--box-shadow-3), var(--box-shadow-4);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+.carousel {
+  width: 90vw;
+}
+
+.accordion-button {
+  color: var(--text-color);
+  background-color: var(--navbar-bg-color);
+  border: 1px solid var(--navbar-bg-color);
+}
+
+.accordion-button:active {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  box-shadow: var(--box-shadow-1), var(--box-shadow-2), var(--box-shadow-3), var(--box-shadow-4);
+}
+
+.accordion-button[aria-expanded="true"] {
+  background-color: hsla(0, 100%, 40%, 1);
+  border-color: #dc3545;
+  color: var(--text-color);
+  box-shadow: var(--box-shadow-1), var(--box-shadow-2), var(--box-shadow-3), var(--box-shadow-4);
+}
+
+.accordion-button[aria-control] {
+  background-color: hsla(0, 100%, 40%, 1);
+  border-color: #dc3545;
+  color: var(--text-color);
+  box-shadow: var(--box-shadow-1), var(--box-shadow-2), var(--box-shadow-3), var(--box-shadow-4);
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border: none!important;
+  outline: 0;
+  box-shadow: none!important;
+}
